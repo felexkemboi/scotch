@@ -1,6 +1,9 @@
 
 
 # app/models.py
+#model is a representation of database in the code
+#we will need Employees,Roles and Departments
+#Usermixin helps us to utilize the properties of flask_login
 
 from flask_login import UserMixin
 from werkzeug.security import generate_password_hash, check_password_hash
@@ -12,8 +15,8 @@ class Employee(UserMixin, db.Model):
     Create an Employee table
     """
 
-    # Ensures table will be named in plural and not in singular
-    # as is the name of the model
+    """Ensure table will be named in plural and not in singular as is the name of the model"""
+    """."""
     __tablename__ = 'employees'
 
     id = db.Column(db.Integer, primary_key=True)
@@ -58,7 +61,12 @@ class Department(db.Model):
     """
     Create a Department table
     """
-
+    #lazy defines how data will be loaded back from the database,in this case is dynamically(large applications)
+    """
+     -> backref enables us to create a new property on the employee model
+     ->so that we can get the role or department assigned to the employee
+     
+    """
     __tablename__ = 'departments'
 
     id = db.Column(db.Integer, primary_key=True)

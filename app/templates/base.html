@@ -28,6 +28,7 @@
                       <li><a href="#">Edit</a></li>
                       <li><a href="#">Delete</a></li>
                       <li><a href="{{ url_for('admin.list_departments') }}">Departments</a></li>
+                      <li><a href="{{ url_for('admin.list_roles') }}">Roles</a></li>
                    {% else %}
                       <li><a href="{{ url_for('home.dashboard') }}">Dashboard</a></li>
                    {% endif %}
