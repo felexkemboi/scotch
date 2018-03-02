@@ -26,6 +26,8 @@ a:hover, .navbar-default .navbar-brand:hover, .navbar-default .navbar-nav>li>a:h
 footer {
     padding: 50px 0;
     background-color: #f8f8f8;
+   bottom:0;
+
 }
 
 p.copyright {
