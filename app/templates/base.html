@@ -36,7 +36,7 @@
                        <li><a href="{{ url_for('auth.logout') }}" class="fa fa-sign-out" style="font-size:16px">Logout</a></i></li>
                        <li><a><i class="fa fa-user"></i>  Hi, {{ current_user.username }}!</a></li>
                 {% else %}
-                       <li><a href="{{ url_for('home.homepage') }}">Home</a></li>
+                       <li><a href="{{ url_for('home.homepage') }}" class="fa fa-home">Home</a></li>
                        <li><a href="{{ url_for('auth.register') }}"><span class="glyphicon glyphicon-user"></span>Register</a></li>
                        <li><a href="{{ url_for('auth.login') }}"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
                 {% endif %}
