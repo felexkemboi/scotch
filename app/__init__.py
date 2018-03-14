@@ -19,6 +19,7 @@ login_manager = LoginManager()
 
 
 def create_app(config_name):
+    #flask application object
     app = Flask(__name__, instance_relative_config=True)
     #app = Flask(__name__, template_folder='')
     app.config.from_object(app_config[config_name])

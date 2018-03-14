@@ -6,6 +6,9 @@ from wtforms.validators import DataRequired, Email, EqualTo
 
 from ..models import Employee
 
+
+#remember to add form.hidden tag() to your forms for security purposes CRSF thing
+
 class RegistrationForm(FlaskForm):
     """
     Form for users to create new account
